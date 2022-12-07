@@ -63,7 +63,7 @@ namespace Exercise_4
                 Console.WriteLine("\nStack Menu\n");
                 Console.WriteLine("1. Push.");
                 Console.WriteLine("2. Pop");
-                Console.WriteLine("3. DIsplay");
+                Console.WriteLine("3. Display");
                 Console.WriteLine("4. Exit");
                 Console.Write("\nEnter your choice: ");
                 string sInput = Console.ReadLine();
@@ -75,7 +75,14 @@ namespace Exercise_4
                         int num = Convert.ToInt32(Console.ReadLine());
                         s.push(num);
                         break;
-                    
+                    case '2':
+                        if (s.empty())
+                        {
+                            Console.WriteLine("\nStack Empty");
+                            break;
+                        }
+                        s.pop();
+                        break;
                 }
             }
         }
