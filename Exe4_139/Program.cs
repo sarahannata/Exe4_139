@@ -17,7 +17,7 @@ namespace Exercise_4
         Node top;
         public Stacks()
         {
-            top = null
+            top = null;
         }
         bool empty()
         {
@@ -33,8 +33,12 @@ namespace Exercise_4
 
             fresh.next = top;
             top = fresh;
-            Console.WriteLine("/n" + elementn + " pushed");
+            Console.WriteLine("/n" + element + " pushed");
         }
-
+        public void pop()
+        {
+            Console.WriteLine("\nThe popped element is: " + top.info);
+            top = top.next;
+        }
     }
 }
